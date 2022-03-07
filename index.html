@@ -1,14 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Howdy!</title>
+<meta charset="utf-8">
+<title>Howdy World!</title>
+<script src="assets/script/jquery-1.8.2.js"></script>	
+<link rel="stylesheet" type="text/css" href="assets/css/MainStyleSheet.css">
+<script>
+$( document ).ready(function() {
+/////////////////////////////////@@@@@@@@@@@@@@@@@@@/////////////////////////////////
+////////////////////Start Test Button////////////////
+$("#TestButton").click(function() {
+alert("Test Alert!");  
+});		
+	
+////////////////////End Test Button////////////////	
+/////////////////////////////////@@@@@@@@@@@@@@@@@@@/////////////////////////////////	
+});	
+</script>	
 </head>
+
 <body>
-   <h1>Hello World!</h1> 
-   <br>
-   Howdy!
+<!--#######################@@@@@ Start Main Content @@@@@#######################-->
+<div id="MainContent">
+<center>	
+<h1>Hello World!</h1>
+<br>
+<img src="assets/images/SampleCoins.jpg" width="320" height="110" alt=""/>
+<br>
+<input type="button" id="TestButton" value="Click">
+</center> 
+</div>
+<!--#######################@@@@@ Start Main Content @@@@@#######################-->	
 </body>
 </html>
