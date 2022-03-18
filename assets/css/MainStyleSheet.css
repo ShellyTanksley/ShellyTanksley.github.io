@@ -18,6 +18,10 @@ background-color: black;
 border-radius: 25px;	
 box-shadow: 0 4px 8px 0 #07ce69, 0 6px 20px 0 #07ce69;
 }
+#LogoBox{
+width:240px;
+height:	240px;
+}
 .RedStar{
 display:inline-block;
 width:10px;
@@ -29,7 +33,7 @@ position:absolute;
 padding-right:5px;	
 }
 #SampleVideo{
-width:50%;
+width:400px;
 height:	auto;
 margin-left:auto;
 margin-right:auto;	
@@ -125,7 +129,7 @@ cursor: pointer;
 outline: 0;	
 }
 
-#MultiCheckBoxList{
+#CustomOptionsList{
 width:210px;
 height:120px;
 overflow-y:scroll;	

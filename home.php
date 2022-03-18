@@ -60,17 +60,26 @@ $("#CustomOptionIntroTitle").css("display", "block");
 <body>
 <!--#######################@@@@@ Start Main Content @@@@@#######################-->
 <div id="MainContent">
-<center>	
-<h1>Hello World!</h1>
+<center>
+<!--Start Logo Box-->	
+<div id="LogoBox">
+<!--@@@@@@@@@@@ Start Content @@@@@@@@@@@-->
+<?php include("FlipLogo.php"); ?>
+<!--@@@@@@@@@@@ End Content @@@@@@@@@@@-->		
+</div>
+<!--End Logo Box-->		
+<br>	
 <br>
+<!--Start Video-->	
 <video id="SampleVideo" controls="" poster="assets/images/AdTwoPoster.jpg">
 <source src="assets/videos/AdTwo.mp4" type="video/mp4">
 Your browser does not support the video tag.
-</video>	
+</video>
+<!--End Video-->		
 <br>
 <br>
 	
-<!--/////////////////** START CustomOptionListHiderBox **/////////////////////-->
+<!--/////////////////** START Custom Option List **/////////////////////-->
 <div id="CustomOptionListHiderBox" class="ClosedList">	
 <!--//////////////////////////////////////-->	
 <div id="CustomOptionListHider" class="ClosedList">
@@ -144,7 +153,7 @@ Your browser does not support the video tag.
 </div>
 <!--//////////////////////////////////////-->	
 </div>	
-<!--/////////////////** END CustomOptionListHiderBox **/////////////////////-->		
+<!--/////////////////** END Custom Option List **/////////////////////-->		
 	
 </center> 
 </div>
