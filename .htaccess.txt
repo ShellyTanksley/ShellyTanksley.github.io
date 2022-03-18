@@ -1,2 +1,0 @@
-Redirect /index.html /home.php
-
