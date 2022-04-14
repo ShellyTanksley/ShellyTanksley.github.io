@@ -10,8 +10,22 @@
 <script>
 $(document).ready(function() {
 /////////////////////////////////@@@@@@@@@@@@@@@@@@@/////////////////////////////////
+
+setTimeout(function(){
+$("#RefreshPrices").trigger("click");		
+}, 1000);	
+setInterval(function(){ 
+$("#RefreshPrices").trigger("click");	
+},8000);	
+	
+$("#RefreshPrices").on('click',function(){
+$("#PriceDataContainer").load("PriceDataTable.html");		
+});	
 	
 	
+	
+	
+		
 /****************@@@@@@@@@@@@@@@@@@@@@@@@ Start Custom Option List Functions @@@@@@@@@@@@@@@@@@@@@@@@****************/	
 /////////////////Start Click Custom Option Button To Show/Hide List//////////////////////////		
 $("#CustomOptionListBtn").click(function() {
@@ -219,71 +233,15 @@ Trading Network
 <!---->
 </div>	
 <!--/////////////////** END Custom Options List **/////////////////////-->	
-	
+
+<input type="button" class="Hidden" id="RefreshPrices">	
 <!--/////////////////**########### START Price Data Container ###########**/////////////////////-->
 <div id="PriceDataContainer">
-	<center>
-<!--//**********Start Pice Data Box**********//-->	
-<div class="PriceDataBox">
-<!--//####Start Pice Data Image####//-->	
-<div id="SwoblDataImage"></div>	
-<!--//####End Pice Data Image####//-->
-	
-<!--//####Start Pice Data Information####//-->	
-<div class="PriceDataInformation">
-<!--//$$@Start Pice Data Price@$$//-->
-<div class="PriceDataPrice">$<span id="SwoblDataPrice"></span></div>	
-<!--//$$@Start Pice Data Price@$$//-->
-<!--//@@@Start Pice Data Name@@@//-->	
-<div class="PriceDataName">SWOBL</div>	
-<!--//@@@Start Pice Data Name@@@//-->	
-</div>	
-<!--//####End Pice Data Information####//-->		
-</div>	
-<!--//**********Start Pice Data Box**********//-->		
-		
-<!--//**********Start Pice Data Box**********//-->	
-<div class="PriceDataBox">
-<!--//####Start Pice Data Image####//-->	
-<div class="PriceDataImage" id="BitcoinDataImage"></div>	
-<!--//####End Pice Data Image####//-->
-	
-<!--//####Start Pice Data Information####//-->	
-<div class="PriceDataInformation">
-<!--//$$@Start Pice Data Price@$$//-->
-<div class="PriceDataPrice">$<span id="BitcoinDataPrice"></span></div>	
-<!--//$$@Start Pice Data Price@$$//-->
-<!--//@@@Start Pice Data Name@@@//-->	
-<div class="PriceDataName">Bitcoin</div>	
-<!--//@@@Start Pice Data Name@@@//-->	
-</div>	
-<!--//####End Pice Data Information####//-->		
-</div>	
-<!--//**********Start Pice Data Box**********//-->
-	
-<!--//**********Start Pice Data Box**********//-->
-<div class="PriceDataBox">
-<!--//####Start Pice Data Image####//-->	
-<div class="PriceDataImage" id="EthereumDataImage"></div>
-<!--//####End Pice Data Image####//-->
-	
-<!--//####Start Pice Data Information####//-->	
-<div class="PriceDataInformation">
-<!--//$$@Start Pice Data Price@$$//-->	
-<div class="PriceDataPrice">$<span id="EthereumDataPrice"></span></div>	
-<!--//$$@Start Pice Data Price@$$//-->
-<!--//@@@Start Pice Data Name@@@//-->	
-<div class="PriceDataName">Ethereum</div>	
-<!--//@@@Start Pice Data Name@@@//-->	
-</div>	
-<!--//####End Pice Data Information####//-->		
-</div>	
-<!--//**********Start Pice Data Box**********//-->
-</center>		
+
 </div>		
 <!--/////////////////**########### END Price Data Container ###########**/////////////////////-->	
 </div>
 <!--#######################@@@@@ End Main Content @@@@@#######################-->
-<script src="assets/script/ap.js"></script>	
+
 </body>
 </html>

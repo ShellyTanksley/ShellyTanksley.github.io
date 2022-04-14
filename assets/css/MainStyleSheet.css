@@ -9,6 +9,9 @@ background-color: #191d28;
 @keyframes blinker {/*///blinking text animation  used for Processing... animation*/
 50% { opacity: 0; }
 }
+.Hidden{
+display:none;
+}
 #MainContent{
 width:70%;
 height:	800px;
