@@ -37,7 +37,8 @@ float:left;
 /*Start Flip Logo Styles*/
 .FlipCard {
 background-color: transparent;
-width:200px;
+/*width:200px;*/
+width:30%;	
 height:	200px;
 perspective: 1000px;
 float:left;	
@@ -346,7 +347,9 @@ font-weight:bold;
 #SampleVideo{
 width:60%;
 }
-
+.FlipCard {
+width:40%;	
+}
 }
 /*@media screen and (max-width: 483px){
 #SampleVideo{
