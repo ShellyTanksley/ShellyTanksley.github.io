@@ -18,8 +18,9 @@ height:3px;
 float:left;
 }
 #MainContent{
-width:95%;
-height:	800px;
+width:80%;
+height:	auto;
+min-height:800px;	
 margin-left:auto;
 margin-right:auto;
 overflow:hidden;
@@ -349,7 +350,7 @@ font-weight:bold;
 
 
 
-@media screen and (max-width: 642px){
+@media screen and (max-width: 672px){
 #SampleVideo{
 width:60%;
 }
@@ -357,7 +358,7 @@ width:60%;
 width:40%;	
 }
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 592px){
 #SampleVideo{
 display:none;
 }
