@@ -78,6 +78,10 @@ color: white;
 background-color: black;
 margin-left:0px;
 transform: rotateY(180deg);
+-moz-user-select: none;
+-khtml-user-select: none;
+-webkit-user-select: none;
+user-select: none;	
 box-shadow: 0 4px 8px 0 #07ce69, 0 6px 20px 0 #07ce69;	
 }
 .CardCenter{
