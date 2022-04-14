@@ -24,7 +24,7 @@ box-shadow: 0 4px 8px 0 #07ce69, 0 6px 20px 0 #07ce69;
 }
 #Header{
 background-color: transparent;
-width:100%;
+width:110%;
 height:	200px;
 float:left;	
 }
@@ -68,7 +68,7 @@ box-shadow: 0 4px 8px 0 #07ce69, 0 6px 20px 0 #07ce69;
 }
 
 .FlipCardBack {
-font-size: 1.5vw;
+font-size:30px;
 color: white;	
 background-color: black;
 margin-left:0px;
