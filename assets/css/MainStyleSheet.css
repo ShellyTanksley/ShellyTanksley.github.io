@@ -29,7 +29,7 @@ box-shadow: 0 4px 8px 0 #07ce69, 0 6px 20px 0 #07ce69;
 }
 #Header{
 background-color: transparent;
-width:110%;
+width:104%;
 height:	200px;
 float:left;	
 }
@@ -364,12 +364,7 @@ width:50%;
 #SampleVideo{
 display:none;
 }
-#Header{
-background-color: transparent;
-width:104%;
-height:	200px;
-float:left;	
-}	
+	
 #CustomOptionsListContainer{
 margin-top:300px;	
 }
