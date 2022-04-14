@@ -13,10 +13,11 @@ background-color: #191d28;
 display:none;
 }
 #MainContent{
-width:70%;
+width:80%;
 height:	800px;
 margin-left:auto;
 margin-right:auto;
+	overflow:hidden;
 background-color: black;
 border-radius: 25px;	
 box-shadow: 0 4px 8px 0 #07ce69, 0 6px 20px 0 #07ce69;
@@ -88,7 +89,7 @@ margin-top:0px;
 }
 /*End Flip Logo Styles*/
 #SampleVideo{
-width:860px;
+width:70%;
 height:	200px;
 margin-left:auto;
 margin-right:auto;
