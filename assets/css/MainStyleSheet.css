@@ -29,7 +29,7 @@ box-shadow: 0 4px 8px 0 #07ce69, 0 6px 20px 0 #07ce69;
 }
 #Header{
 background-color: transparent;
-width:104%;
+width:100%;
 height:	200px;
 float:left;	
 }
@@ -104,6 +104,8 @@ margin-left:auto;
 margin-right:auto;
 object-fit: fill;	
 float:left;	
+border-top-right-radius: 25px;	
+box-shadow: 0 4px 8px 0 #07ce69, 0 6px 20px 0 #07ce69;	
 }
 
 /*Start Custom Option List Styles*/
@@ -355,11 +357,6 @@ width:60%;
 width:40%;	
 }
 }
-/*@media screen and (max-width: 483px){
-#SampleVideo{
-width:50%;
-}
-}*/
 @media screen and (max-width: 500px){
 #SampleVideo{
 display:none;
