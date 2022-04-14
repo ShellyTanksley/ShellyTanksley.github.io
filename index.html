@@ -5,15 +5,28 @@
 <title>Howdy World!</title>
 <script src="assets/script/jquery-1.8.2.js"></script>	
 <link rel="stylesheet" type="text/css" href="assets/css/MainStyleSheet.css">
+	<script>
+	var btc = doccument.getElementById("BitcoinDataPrice");	
+	var eth = doccument.getElementById("EthereumDataPrice");	
+		
+		
+	var liveprice = {
+		"async":true,
+		"scroosDomain": true,
+		"url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd",
+		"method":"GET",
+		"headers":{}
+	}
+	$.ajax(liveprice).done(function(response){
+	console.log.(response);	
+	btc.innerHTML = response.bitcoin.usd;
+	eth.innerHTML = response.ethereum.usd;	
+	});
+	</script>
 <script>
-$( document ).ready(function() {
+$(document).ready(function() {
 /////////////////////////////////@@@@@@@@@@@@@@@@@@@/////////////////////////////////
-////////////////////Start Test Button////////////////
-$("#TestButton").click(function() {
-alert("Test Alert!");  
-});		
-	
-////////////////////End Test Button////////////////	
+		
 	
 /****************@@@@@@@@@@@@@@@@@@@@@@@@ Start Custom Option List Functions @@@@@@@@@@@@@@@@@@@@@@@@****************/	
 /////////////////Start Click Custom Option Button To Show/Hide List//////////////////////////		
@@ -54,15 +67,18 @@ $("#CustomOptionIntroTitle").css("display", "block");
 	
 /////////////////////////////////@@@@@@@@@@@@@@@@@@@/////////////////////////////////	
 });	
-</script>	
+</script>
+
+	
 </head>
 
 <body>
 <br><br>	
 <!--#######################@@@@@ Start Main Content @@@@@#######################-->
 <div id="MainContent">
-<center>
-	<br><br>
+<!--#################@@@@@ Start Header @@@@@#################-->	
+<div id="Header">
+	<center>
 <!--@@@@@@********Start Flip Card********@@@@@@-->		
 <div class="FlipCard">
 <div class="FlipCardInner">
@@ -73,8 +89,6 @@ $("#CustomOptionIntroTitle").css("display", "block");
 <div class="CardCenter">
 <center>
 <img src="assets/images/logo-sq.jpg" alt="Logo" width="175" height="175">
-<br>
-Swopblock
 </center> 
 </div>	
 <!--End Card Center-->			
@@ -84,7 +98,8 @@ Swopblock
 <div class="FlipCardBack">
 <!--Start Card Center-->	
 <div class="CardCenter">
-<center>	
+<center>
+Swopblock	
 Crypto’s First
 Autonomous
 Trading Network
@@ -95,19 +110,55 @@ Trading Network
 <!--@@@@@@End Card Back@@@@@@-->	
 </div>
 </div>
-<!--@@@@@@********Start Flip Card********@@@@@@-->
-<br>	
-<br>
+<!--@@@@@@********End Flip Card********@@@@@@-->
 <!--Start Video-->	
-<video id="SampleVideo" controls="" poster="assets/images/AdTwoPoster.jpg">
-<source src="assets/videos/AdTwo.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<!--End Video-->		
-<br>
-<br>
+<video id="SampleVideo" poster="assets/images/AdTwoPoster.jpg" controls="controls" muted="muted" autoplay="autoplay" >
+  <source src="assets/videos/AdTwo.mp4" type="video/mp4">
+  Your browser does not support the video tag. </video>
+<!--End Video-->
+<!--@@@@@@********Start Flip Card********@@@@@@-->		
+<div class="FlipCard">
+<div class="FlipCardInner">
+<!--@@@@@@Start Card Front@@@@@@-->		
+<div class="FlipCardFront">
+
+<!--Start Card Center-->	
+<div class="CardCenter">
+<center>
+<img src="assets/images/logo-sq.jpg" alt="Logo" width="175" height="175">
+</center> 
+</div>	
+<!--End Card Center-->			
+</div>
+<!--@@@@@@End Card Front@@@@@@-->		
+<!--@@@@@@Start Card Back@@@@@@-->	  
+<div class="FlipCardBack">
+<!--Start Card Center-->	
+<div class="CardCenter">
+<center>
+Swopblock
+Crypto’s First
+Autonomous
+Trading Network
+</center>
+</div>
+<!--End Card Center-->	
+</div>
+<!--@@@@@@End Card Back@@@@@@-->	
+</div>
+</div>
+<!--@@@@@@********End Flip Card********@@@@@@-->
+</center>		
+</div>
+<!--#################@@@@@ End Header @@@@@#################-->		
+
+
 	
-<!--/////////////////** START CustomOptionListHiderBox **/////////////////////-->
+
+
+<!--/////////////////** START Custom Options List **/////////////////////-->
+<div id="CustomOptionsListContainer">
+<!---->	
 <div id="CustomOptionListHiderBox" class="ClosedList">	
 <!--//////////////////////////////////////-->	
 <div id="CustomOptionListHider" class="ClosedList">
@@ -180,11 +231,74 @@ Your browser does not support the video tag.
 <!--////////////////End Custom Options List//////////////////////-->		
 </div>
 <!--//////////////////////////////////////-->	
-</div>	
-<!--/////////////////** END CustomOptionListHiderBox **/////////////////////-->		
-	
-</center> 
 </div>
-<!--#######################@@@@@ Start Main Content @@@@@#######################-->	
+<!---->
+</div>	
+<!--/////////////////** END Custom Options List **/////////////////////-->	
+	
+<!--/////////////////**########### START Price Data Container ###########**/////////////////////-->
+<div id="PriceDataContainer">
+	<center>
+<!--//**********Start Pice Data Box**********//-->	
+<div class="PriceDataBox">
+<!--//####Start Pice Data Image####//-->	
+<div id="SwoblDataImage"></div>	
+<!--//####End Pice Data Image####//-->
+	
+<!--//####Start Pice Data Information####//-->	
+<div class="PriceDataInformation">
+<!--//$$@Start Pice Data Price@$$//-->
+<div class="PriceDataPrice">$<span id="SwoblDataPrice"></span></div>	
+<!--//$$@Start Pice Data Price@$$//-->
+<!--//@@@Start Pice Data Name@@@//-->	
+<div class="PriceDataName">SWOBL</div>	
+<!--//@@@Start Pice Data Name@@@//-->	
+</div>	
+<!--//####End Pice Data Information####//-->		
+</div>	
+<!--//**********Start Pice Data Box**********//-->		
+		
+<!--//**********Start Pice Data Box**********//-->	
+<div class="PriceDataBox">
+<!--//####Start Pice Data Image####//-->	
+<div class="PriceDataImage" id="BitcoinDataImage"></div>	
+<!--//####End Pice Data Image####//-->
+	
+<!--//####Start Pice Data Information####//-->	
+<div class="PriceDataInformation">
+<!--//$$@Start Pice Data Price@$$//-->
+<div class="PriceDataPrice">$<span id="BitcoinDataPrice"></span></div>	
+<!--//$$@Start Pice Data Price@$$//-->
+<!--//@@@Start Pice Data Name@@@//-->	
+<div class="PriceDataName">Bitcoin</div>	
+<!--//@@@Start Pice Data Name@@@//-->	
+</div>	
+<!--//####End Pice Data Information####//-->		
+</div>	
+<!--//**********Start Pice Data Box**********//-->
+	
+<!--//**********Start Pice Data Box**********//-->
+<div class="PriceDataBox">
+<!--//####Start Pice Data Image####//-->	
+<div class="PriceDataImage" id="EthereumDataImage"></div>
+<!--//####End Pice Data Image####//-->
+	
+<!--//####Start Pice Data Information####//-->	
+<div class="PriceDataInformation">
+<!--//$$@Start Pice Data Price@$$//-->	
+<div class="PriceDataPrice">$<span id="EthereumDataPrice"></span></div>	
+<!--//$$@Start Pice Data Price@$$//-->
+<!--//@@@Start Pice Data Name@@@//-->	
+<div class="PriceDataName">Ethereum</div>	
+<!--//@@@Start Pice Data Name@@@//-->	
+</div>	
+<!--//####End Pice Data Information####//-->		
+</div>	
+<!--//**********Start Pice Data Box**********//-->
+</center>		
+</div>		
+<!--/////////////////**########### END Price Data Container ###########**/////////////////////-->	
+</div>
+<!--#######################@@@@@ End Main Content @@@@@#######################-->	
 </body>
 </html>
