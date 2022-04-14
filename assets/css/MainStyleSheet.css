@@ -343,17 +343,20 @@ width:60%;
 }
 
 }
-@media screen and (max-width: 483px){
+/*@media screen and (max-width: 483px){
 #SampleVideo{
 width:50%;
 }
-}
-@media screen and (max-width: 399px){
+}*/
+@media screen and (max-width: 500px){
 #SampleVideo{
 display:none;
 }
 #CustomOptionsListContainer{
-margin-top:100px;	
+margin-top:200px;	
 }
-	
+.FlipCard {
+background-color: transparent;
+width:100%;
+}	
 }
