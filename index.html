@@ -63,7 +63,28 @@ $("#CustomOptionIntroTitle").css("display", "block");
 });		
 /////////////////End Click Custom Option Highlight Selected//////////////////////////			
 /****************@@@@@@@@@@@@@@@@@@@@@@@@ End Custom Option List Functions @@@@@@@@@@@@@@@@@@@@@@@@****************/	
+/////////////////Start FlipCard Front Mouse Over Function//////////////////////////	
+$(".FlipCard").mouseover(function() { 
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ // do dada
+}	
+	else{
+$(".FlipCardInner").css("transform", "rotateY(180deg)");		
+	}
 	
+});		
+/////////////////End FlipCard Front Mouse Over Function//////////////////////////	
+/////////////////Start FlipCard Front Mouse Over Function//////////////////////////	
+$(".FlipCard").mouseout(function() { 
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ // do dada
+}	
+	else{
+$(".FlipCardInner").css("transform", "rotateY(0deg)");		
+	}
+	
+});		
+/////////////////End FlipCard Front Mouse Over Function//////////////////////////		
 /////////////////Start FlipCard Front Click Function//////////////////////////	
 $(".FlipCardFront").click(function() { 
 $(".FlipCardInner").css("transform", "rotateY(180deg)");	
