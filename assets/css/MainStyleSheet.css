@@ -20,6 +20,7 @@ float:left;
 #MainContent{
 width:80%;
 height:	auto;
+position:relative;
 min-height:800px;	
 margin-left:auto;
 margin-right:auto;
@@ -28,13 +29,23 @@ background-color: black;
 border-radius: 25px;	
 box-shadow: 0 4px 8px 0 #07ce69, 0 6px 20px 0 #07ce69;
 }
+
 #Header{
 background-color: transparent;
 width:100%;
 height:	200px;
 float:left;	
 }
-
+#SampleVideo{
+width:70%;
+height:	200px;
+margin-left:auto;
+margin-right:auto;
+object-fit: fill;	
+float:left;	
+border-top-right-radius: 25px;	
+box-shadow: 0 4px 8px 0 #07ce69, 0 6px 20px 0 #07ce69;	
+}
 /*Start Flip Logo Styles*/
 .FlipCard {
 background-color: transparent;
@@ -98,16 +109,7 @@ background-color:black;
 margin-top:0px;
 }
 /*End Flip Logo Styles*/
-#SampleVideo{
-width:70%;
-height:	200px;
-margin-left:auto;
-margin-right:auto;
-object-fit: fill;	
-float:left;	
-border-top-right-radius: 25px;	
-box-shadow: 0 4px 8px 0 #07ce69, 0 6px 20px 0 #07ce69;	
-}
+
 
 /*Start Custom Option List Styles*/
 #CustomOptionsListContainer{
@@ -346,10 +348,32 @@ float:left;
 font-weight:bold;
 }
 /*End Price Data Container Styles*/
+/*Start Crypto Price Changes Data Table Styles*/
+
+#leaderboard{
+color:lime;
+width: 50%;
+border-collapse: collapse;
+}
+#leaderboard, td, th {
+border: 1px solid;
+border-color:lime;
+padding-left:2px;
+}
 
 
-
-
+/*End Crypto Price Changes Data Table Styles*/
+@media screen and (max-width: 1440px){
+.FlipCardInnerFlip {
+transform: rotateY(180deg);
+}
+.FlipCardInnerBack {
+transform: rotateY(0);
+}	
+.FlipCard:hover .FlipCardInner {
+transform: rotateY(0deg);
+}	
+}
 @media screen and (max-width: 672px){
 #SampleVideo{
 width:60%;
