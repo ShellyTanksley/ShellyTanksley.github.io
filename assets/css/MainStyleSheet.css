@@ -173,7 +173,6 @@ width:30px;
 height:30px;
 float:left;
 margin-left:5px;
-background-image:url("../images/coins.svg");
 background-repeat: no-repeat;
 background-size: 100%;	
 display:none;
@@ -244,30 +243,41 @@ background-image:url("../images/coins.svg");
 background-repeat: no-repeat;
 background-size: 100%;
 }
+.OptionImgSWOBL{
+background-image:url("../images/SWOBLCoin.png");
+}
 
 .OptionImgBCH{
+background-image:url("../images/coins.svg");	
 background-position: 0 0px;
 }
 .OptionImgBTC{
+background-image:url("../images/coins.svg");	
 background-position: 0 -30px;
 }
 .OptionImgETH {
+background-image:url("../images/coins.svg");	
 background-position: 0 -150px;
 }
 .OptionImgATOM {
+background-image:url("../images/coins.svg");	
 background-position: 0 -660px;
 }
 .OptionImgBUSD {
+background-image:url("../images/coins.svg");	
 background-position: 0 -1590px;
 }
 .OptionImgCAKE {
+background-image:url("../images/coins.svg");	
 background-position: 0 -2850px;
 }
 .OptionImgDOGE {
+background-image:url("../images/coins.svg");	
 background-position: 0 -3150px;
 }
 
 .OptionImgSHIB {
+background-image:url("../images/coins.svg");	
 background-position: 0 -3270px;
 }
 

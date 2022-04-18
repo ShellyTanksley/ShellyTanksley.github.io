@@ -51,15 +51,16 @@ $("#CustomOptionIntroImg").removeClass();
 $("#CustomOptionIntroTitle").html("");		
 setTimeout(function(){
 var SelfText = $(self).find(".CustomOptionTitle").text();
+
 $("#CustomOptionListBtn").trigger("click");
 $("#CustomOptionIntroImg").addClass('OptionImg'+SelfText);	
 $("#CustomOptionIntroTitle").html(SelfText);	
 $(self).addClass("SelectedOption"); 
-}, 40);	
+}, 60);	
 setTimeout(function(){
 $("#CustomOptionIntroImg").css("display", "block");
 $("#CustomOptionIntroTitle").css("display", "block");	
-}, 50);		
+}, 70);		
 });		
 /////////////////End Click Custom Option Highlight Selected//////////////////////////			
 /****************@@@@@@@@@@@@@@@@@@@@@@@@ End Custom Option List Functions @@@@@@@@@@@@@@@@@@@@@@@@****************/	
@@ -130,13 +131,7 @@ $(".FlipCardInner").css("transform", "rotateY(0deg)");
 <!--Start Card Center-->	
 <div class="CardCenter">
 <center>
-Swopblock
-<div class="SmallBreak"></div>	
-Crypto’s First
-<div class="SmallBreak"></div>	
-Autonomous
-<div class="SmallBreak"></div>	
-Trading Network
+<img src="assets/images/SwopblockBack.jpg" alt="Logo" width="175" height="175">
 </center>
 </div>
 <!--End Card Center-->	
@@ -205,8 +200,8 @@ Trading Network
 <!--<div id="CustomOptionListTitleBox"  title="Select 1 or More to select more (hold down Ctrl) then select options">-->	
 <div id="CustomOptionListTitleBox"  title="Select 1 or More">	
 <div id="CustomOptionListTitle">
-<div class="OptionImgBCH" id="CustomOptionIntroImg"></div>
-<div id="CustomOptionIntroTitle">BCH</div>	
+<div class="OptionImgSWOBL" id="CustomOptionIntroImg"></div>
+<div id="CustomOptionIntroTitle">SWOBL</div>	
 <span id="OptionIntroText">Select One</span>
 </div>
 <input type="button" id="CustomOptionListBtn" value="&#8964;">	
@@ -217,6 +212,12 @@ Trading Network
 <div id="CustomOptionsList">
 <!---->
 <div class="CustomOptionRow SelectedOption">
+<div class="CustomOptionImg OptionImgSWOBL"></div>
+<div class="CustomOptionTitle">SWOBL</div>
+</div>
+<!---->	
+<!---->
+<div class="CustomOptionRow">
 <div class="CustomOptionImg OptionImgBCH"></div>
 <div class="CustomOptionTitle">BCH</div>
 </div>
@@ -297,8 +298,8 @@ console.log(data[0]);
 	
 /*<!--start initialization-->*/
 var cryptocurrencies;
-var timerID;
-var updateInterval = 30000;
+/*var timerID;
+var updateInterval = 30000;*/
 /*<!--end initialization-->*/
 /*<!--Start Reset Board Function-->*/
 function resetBoard(){
