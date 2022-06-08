@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+    
+      
+      .chartCard {
+        width: 100vw;
+        height: calc(100vh - 40px);
+        background: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .chartBox {
+        width: 700px;
+        padding: 20px;
+        border-radius: 20px;
+        border: solid 3px lime;
+        background: white;
+      }
+    </style>	
+</head>
+
+<body>
+    <div class="chartCard">
+      <div class="chartBox">
+<canvas id="myChart"></canvas>
+		  <br>
+		  <input type="number" id="pushvalue" >
+		  		  <br>
+		  <input type="text" id="pushlabel" >
+		  <br>
+		  <input type="button" id="push" value="Push Value">
+      </div>
+    </div>	
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['50,000,000','40,000,000', '30,000,000','20,000,000', '10,000,000'],
+        datasets: [{// index[0]
+            label: '# of Votes',
+            data: [200, 19, 3, 75,600],
+            backgroundColor: [
+                'lime'
+             
+            ],
+            borderColor: [
+                'lime'
+             
+            ],
+            borderWidth: 1,
+			spanGaps: true
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true,
+				position: 'right'
+            }
+        }
+    }
+});
+	
+	const push = document.getElementById("push");
+	push.addEventListener('click',pushValueChart);
+	function pushValueChart(){
+	const pushValue = document.getElementById("pushvalue");	
+	const pushLabel = document.getElementById("pushlabel");		
+	myChart.data.datasets[0].data.push(pushValue.value);
+	myChart.data.labels.push(pushLabel.value);	
+	myChart.update();	
+	}
+</script>
+</body>
+</html>
