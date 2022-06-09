@@ -6,7 +6,7 @@
 
 
     <style>
-      body{
+      * {
         margin: 0;
         padding: 0;
         font-family: sans-serif;
@@ -49,10 +49,10 @@ const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ['50,000,000','40,000,000', '30,000,000','20,000,000', '10,000,000'],
+        labels: ['34','73', '148','219', '304'],
         datasets: [{// index[0]
-            label: '# of Votes',
-            data: [200, 19, 3, 75,600],
+            label: 'BTC Value Sum',
+            data: [40, 79, 154, 225,310],
             backgroundColor: [
                 'lime'
              
