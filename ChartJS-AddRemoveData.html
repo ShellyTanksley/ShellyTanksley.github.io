@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Replace Data & Title</title>
+<script src="assets/script/jquery-1.8.2.js"></script>
+<script>
+$( document ).ready(function() {
+	
+/*Start Data Next Btn*/	
+$("#DataNext").click(function() {
+if($("#inputdata option:last").is(":selected")){
+$("#inputdata option:first").prop("selected", "selected");
+}
+else{
+$("#inputdata option:selected").next("option").prop("selected", "selected");		
+}
+});	
+/*End Data Next Btn*/		
+
+/*Start Label Next Btn*/	
+$("#LabelNext").click(function() {
+if($("#inputlabel option:last").is(":selected")){
+$("#inputlabel option:first").prop("selected", "selected");
+}
+else{
+$("#inputlabel option:selected").next("option").prop("selected", "selected");		
+}
+});	
+/*End Label Next Btn*/		
+setInterval(function(){		
+ $("#DataNext").trigger("click");
+ $("#LabelNext").trigger("click");	
+ $("#insertdata").trigger("click");		
+}, 3000); 	
+	
+});	
+</script>
+<style>
+body {
+margin: 0;
+padding: 0;
+font-family: sans-serif;
+}
+    
+      
+.chartCard {
+width: 100vw;
+height: calc(100vh - 40px);
+background: black;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.chartBox {
+width: 700px;
+padding: 20px;
+border-radius: 20px;
+border: solid 3px lime;
+background: white;
+}
+    </style>	
+</head>
+
+<body>
+<div class="chartCard">
+<div class="chartBox">
+<canvas id="myChart"></canvas>
+		  
+<br>
+<center style="display:none;">
+<input type="button" id="DataNext" value="Data Next" >&nbsp;	
+Data:
+<select id="inputdata" >
+<option selected="selected">40</option>
+<option>79</option>
+<option>154</option>
+<option>225</option>
+<option>310</option>
+<option>402</option>
+<option>455</option>
+<option>495</option>
+<option>588</option>
+<option>647</option>
+<option>686</option>
+<option>703</option>
+<option>798</option>
+<option>850</option>
+<option>940</option>
+<option>950</option>
+<option>1029</option>
+<option>1067</option>
+<option>1131</option>
+<option>1217</option>
+<option>1238</option>
+<option>1263</option>
+<option>1361</option>
+<option>1422</option>
+</select>
+&nbsp;&nbsp;
+<input type="button" id="LabelNext" value="Label Next" >&nbsp;	
+Label:&nbsp;
+<select id="inputlabel">
+<option selected="selected">34</option>
+<option>73</option>	
+<option>148</option>
+<option>219</option>
+<option>304</option>
+<option>396</option>
+<option>449</option>
+<option>489</option>
+<option>582</option>
+<option>641</option>
+<option>680</option>
+<option>697</option>
+<option>792</option>
+<option>844</option>
+<option>934</option>
+<option>944</option>
+<option>1023</option>
+<option>1061</option>
+<option>1125</option>
+<option>1211</option>
+<option>1232</option>
+<option>1257</option>
+<option>1355</option>
+<option>1416</option>
+</select>			  
+&nbsp;&nbsp;
+<input onclick="updateChart()" type="button" id="insertdata" value="Add Data">
+</center> 	  
+      </div>
+
+    </div>
+
+	
+	
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: [641,449, 148,219, 304],
+        datasets: [{// index[0]
+            label: 'BTC Volume',
+            data: [40,79, 154,225, 310],
+            backgroundColor: [
+                'lime'
+             
+            ],
+            borderColor: [
+                'lime'
+             
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true,
+				position: 'right'
+            }
+        }
+    }
+});
+	
+function updateChart(){
+const inputdata = document.getElementById("inputdata");
+const selectedinputdata = inputdata.options[inputdata.selectedIndex].text;	
+const inputlabel = document.getElementById("inputlabel");
+const selectedinputlabel = inputlabel.options[inputlabel.selectedIndex].text;		
+	
+
+
+	
+myChart.data.datasets[0].data.push(selectedinputdata);	
+myChart.data.labels.push(selectedinputlabel);
+myChart.data.datasets[0].data.shift();
+
+
+myChart.data.labels.shift();	
+
+myChart.update();	
+}
+/// pop = remove the last value of the array	
+/// shift = remove the first value of the array	
+/// push = adding a value to the end of the array	
+/// unshift  = adding a value to the beginning of the array
+	
+</script>
+</body>
+</html>
