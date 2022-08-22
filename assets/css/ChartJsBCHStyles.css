@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+
+.Hidden{
+display:none;		
+}   
+      
+#BCHPageContent {
+width: 100%;
+height: auto;	
+display:none;	
+}
+#BCHChartRow{
+width:100%;
+height:auto;
+float:left;
+}	
+#BCHChartBox {
+width: 100%;
+height: 200px;	
+padding:10px;
+border-radius: 20px;
+border: solid 3px lime;
+background: white;
+box-sizing: border-box;
+}
+#BCHChart{
+float:left;
+margin-bottom:30px;
+}	
+.ListRow{
+width:100%;
+height:30px;
+color:lime;
+float:left;
+}
+
+#ListTitleRow{
+width:100%;
+height:50px;
+color:lime;
+float:left;
+}
+.InfoBox{
+width:45px !important;
+}
+.TableBCHData{
+width:35px !important;
+font-size:12px !important;
+}
+.TableBCHData:nth-child(6n+1){
+background-color:pink !important;		
+}
+.TableBCHLabel{
+width:35px !important;
+font-size:12px !important;
+}
+.TableBCHLabel:nth-child(6n+1){
+background-color:pink !important;		
+}
+#BCHChartTitleRow{
+width:100%;
+height:30px;
+float:left;
+}	
+#BCHChartTitle{
+width:auto;
+height:30px;
+line-height:30px;
+font-size:18px;
+font-weight:bold;
+display:inline-block;
+vertical-align: bottom;	
+}
+#BCHChartTitleImg{
+width:30px;
+height:30px;
+background-repeat: no-repeat;
+background-size: 100%;
+display:inline-block;
+vertical-align: bottom;	
+background-image:url("../images/coins.svg");	
+background-position: 0 0px;	
+}
+	
+/*Start Mobile Styles*/
+@media screen and (max-width: 858px){
+#BCHChartBox {
+width: 100%;
+padding-top:0px;
+padding-bottom:0px;	
+padding-left:0px;
+padding-right:0px;	
+box-sizing: border-box;		
+}	
+}	
+	
+	
+/*End Mobile Styles*/
